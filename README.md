@@ -1,4 +1,4 @@
-# Personal Finance Tracker Web
+# Personal Finance Tracker 
 
 A Java-based Personal Finance Tracker developed using Spring Boot to help users manage their personal income and expenses.
 
