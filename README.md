@@ -1,42 +1,84 @@
-# Personal Finance Tracker — Spring Boot Website
+# Personal Finance Tracker Web
 
-A responsive finance dashboard backed by Java Spring Boot. It uses `BigDecimal` for money, `java.time` for dates, NIO.2 (`Path`/`Files`) for CSV persistence, and CSV downloads for reports.
+A Java-based Personal Finance Tracker developed using Spring Boot to help users manage their personal income and expenses.
 
-## Requirements
-- JDK 17 or newer
-- Maven 3.6+ (or use the Maven wrapper if you add one)
-- VS Code with Extension Pack for Java (optional but helpful)
+## About the Project
 
-## Run
-1. Extract the ZIP and open the project folder in VS Code.
-2. Ensure Java 17+ and Maven are installed (`java -version`, `mvn -version`).
-3. In the project root, run:
+The Personal Finance Tracker is a web-based application that helps users record and manage their financial transactions. It is designed to provide an organized way to track income, monitor expenses, and understand personal spending.
+
+## Features
+
+- **Add Transactions:** Record financial transactions with relevant details.
+- **View Transactions:** Display recorded financial transactions.
+- **Income Tracking:** Keep track of money received.
+- **Expense Tracking:** Monitor spending and expenses.
+- **Financial Summary:** View income, expenses, and remaining balance.
+- **Web Interface:** Interact with the application through a browser.
+
+## Technologies Used
+
+- Java 21
+- Spring Boot
+- Maven
+- HTML5
+- CSS3
+- JavaScript
+
+## How to Run
+
+1. Install Java JDK 21.
+2. Install Apache Maven.
+3. Download or clone this repository.
+4. Open a terminal in the project directory.
+5. Run the following command:
 
    ```bash
    mvn spring-boot:run
    ```
 
-4. Open http://localhost:8080 in your browser.
+6. Open your browser and visit:
 
-## Features
-- Responsive dashboard with monthly income, expenses, net cash flow and transaction count.
-- Add income and expense records.
-- Filter transactions by date range and category.
-- Category-wise expense totals and percentages.
-- Download transaction CSV and monthly summary CSV.
-- Persists transactions in `data/transactions.csv`.
+   ```text
+   http://localhost:8080
+   ```
 
-## API
-- `GET /api/transactions?start=2026-10-01&end=2026-10-31&category=Food`
-- `POST /api/transactions` with JSON such as:
-  `{"type":"EXPENSE","category":"Food","amount":250.50,"remarks":"Lunch"}`
-- `GET /api/summary?month=2026-10`
-- `GET /api/export/transactions`
-- `GET /api/export/summary?month=2026-10`
+7. If port 8080 is already in use, start the application on port 8081:
 
-## Notes
-This starter is intended for local coursework/demo use. It does not include authentication or multi-user isolation; do not expose it publicly with personal financial data without adding appropriate security.
-=======
-# Personal-Finance-Tracker
-A Java-based Personal Finance Tracker web application built with Spring Boot, HTML, CSS, and JavaScript to manage income, track expenses, and view financial summaries.
->>>>>>> c0630c2d4e2aa9f6be6f4d65a4fc8a04c99f8e80
+   ```bash
+   mvn spring-boot:run "-Dspring-boot.run.arguments=--server.port=8081"
+   ```
+
+   Then visit `http://localhost:8081`.
+
+## Data Storage
+
+The application manages financial information through its implemented storage mechanism. Transaction persistence depends on the database or storage configuration used in the project.
+
+## Example Calculation
+
+Suppose the recorded transactions are:
+
+- Income: ₹5,000
+- Food expenses: ₹1,200
+- Travel expenses: ₹500
+
+The financial summary will be:
+
+- **Total Income:** ₹5,000
+- **Total Expenses:** ₹1,700
+- **Remaining Balance:** ₹3,300
+
+## Learning Outcomes
+
+Through this project, I practised:
+
+- Java programming and object-oriented programming
+- Spring Boot application development
+- Maven dependency management
+- Web application development
+- HTML, CSS, and JavaScript integration
+- Application execution and debugging
+
+## Author
+
+Created as a Java web development project to practise application development using Spring Boot.
