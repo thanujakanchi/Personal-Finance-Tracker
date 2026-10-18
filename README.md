@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Personal Finance Tracker — Spring Boot Website
 
 A responsive finance dashboard backed by Java Spring Boot. It uses `BigDecimal` for money, `java.time` for dates, NIO.2 (`Path`/`Files`) for CSV persistence, and CSV downloads for reports.
